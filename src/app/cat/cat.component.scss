@@ -1,0 +1,28 @@
+.card {
+  max-width: 400px;
+  height: 600px;
+}
+
+.card-img {
+  height: 300px;
+  object-fit: cover;
+  border-top: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
+}
+
+.card-txt {
+	height: 150px;
+}
+
+.greynote {
+	margin-top: 5px; 
+	color: lightgrey;
+}
+
+.VFact {
+	color: green;
+}
+
+.FFact {
+	color: red;
+}
