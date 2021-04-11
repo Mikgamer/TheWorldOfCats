@@ -25,13 +25,9 @@ export class CatRepositoryService {
     let d : string = ""+c;
     if (d=="null") {d='no'}
     this.sendfact.push([a,b,d]);
-
   }
 
-  getFav() {
-    return this.sendfact;
-  }
-
+  getFav() { return this.sendfact; }
 
   async getCatFacts() {
     const response = await this.httpClient
@@ -46,4 +42,5 @@ export class CatRepositoryService {
       .toPromise();
     return response;
   }
+  
 }

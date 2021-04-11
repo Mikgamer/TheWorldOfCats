@@ -1,0 +1,20 @@
+h1 {
+	font-size: 2rem;
+	padding: 50px 0 20px 20px;
+	margin: 0;
+}
+
+.michael {
+	display: inline-block;
+	font-size: 1rem;
+	animation: mouv 4s ease-in-out infinite;
+	color: rgb(226,79,93);
+	user-select: none;
+}
+
+// Animation de Michael PERARD
+@keyframes mouv {
+  	0%, 50%, 100% {transform : scale(0.85) rotate(0deg);}
+  	25% {transform : scale(1) rotate(5deg);}
+  	75% {transform : scale(1) rotate(-5deg);}
+}

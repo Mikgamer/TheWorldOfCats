@@ -8,37 +8,21 @@ import { CatRepositoryService, Fact, Catimg } from '../services/cat-repository.s
 })
 export class CatComponent implements OnInit {
 
-	constructor(private catRepositoryService : CatRepositoryService) {}
+  constructor(private catRepositoryService : CatRepositoryService) {}
 
-	cats: Fact[] = [];
-	imgs: Catimg[] = [];
+  cats: Fact[] = [];
+  imgs: Catimg[] = [];
 
-	ngOnInit(): void {
-		this.catRepositoryService
-		.getCatFacts()
-		.then((r) => {this.cats = r;});
+  ngOnInit(): void {
+	this.catRepositoryService.getCatFacts().then((r) => {this.cats = r;});
+	this.catRepositoryService.getCatimg().then((re) => {this.imgs = re;});
+  }
 
-		this.catRepositoryService
-		.getCatimg()
-		.then((re) => {this.imgs = re;});
-	}
+  onSave( a : string, b : string, c : boolean) { this.catRepositoryService.addFav(a,b,c); }
 
-	onSave( a : string, b : string, c : boolean) {
-		this.catRepositoryService.addFav(a,b,c);
-	}
+  onRefresh() {
+	this.catRepositoryService.getCatFacts().then((r) => {this.cats = r;});
+	this.catRepositoryService.getCatimg().then((re) => {this.imgs = re;});
+  }
 
-
-
-	onRefresh() {
-		this.catRepositoryService
-		.getCatFacts()
-		.then((r) => {this.cats = r;});
-
-		this.catRepositoryService
-		.getCatimg()
-		.then((re) => {this.imgs = re;});
-	}
-
-
-	
 }

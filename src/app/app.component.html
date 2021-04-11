@@ -1,17 +1,11 @@
-
-<img src="https://media.tenor.com/images/7645a8d8641078195b89b1b7f096c7b2/tenor.gif" alt="CatVibing" style="display: none;position: fixed; height: 100vh; top: 0; left: 0; z-index: 10;">
 <div class="container">
-  <h1>The World Of Cats</h1>
-   <!-- Correspond au `selector` du component crée -->
-  	<mat-tab-group>
-	  	<mat-tab label="New Facts">
-	  		<app-cat></app-cat>
-	  	</mat-tab>
-	  	<mat-tab label="Saved Facts">
-	  		<app-catsave></app-catsave>
-	  	</mat-tab>
-	</mat-tab-group>
-
-	<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
+  <!-- Titre Affiché -->
+  <h1>The World Of Cats <span class="michael">Michael PERARD 2021</span></h1>
+  <!-- Tab pour séparer le composant qui génère les cartes sur les chats et celui qui les sauvegardent -->
+  <mat-tab-group>
+  	<!-- Composant qui affiche les cartes générées -->
+	<mat-tab label="New Facts"><app-cat></app-cat></mat-tab>
+	<!-- Composant qui affiche les cartes sauvegardée -->
+	<mat-tab label="Saved Facts"><app-catsave></app-catsave></mat-tab>
+  </mat-tab-group>
 </div>

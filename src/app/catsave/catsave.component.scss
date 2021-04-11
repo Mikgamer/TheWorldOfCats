@@ -1,23 +1,24 @@
+h1.text { margin: 10px 0 0 5px; }
+
+h1.text > button {
+    min-width: 40px;
+    box-shadow: 0 0 5px rgb(0,0,0,0.2);
+    font-size: 2rem;
+}
+
 .card {
-  max-width: 400px;
-  height: 600px;
+    max-width: 400px;
+    height: 600px;
 }
 
 .card-img {
-  height: 300px;
-  object-fit: cover;
-  border-top: 2px solid lightgrey;
-  border-bottom: 2px solid lightgrey;
+    height: 300px;
+    object-fit: cover;
+    border-top: 2px solid lightgrey; border-bottom: 2px solid lightgrey;
 }
 
-.card-txt {
-	height: 150px;
-}
+.card-txt { height: 150px; }
 
-.VFact {
-	color: green;
-}
-
-.FFact {
-	color: red;
-}
+// Couleur des annecdotes
+.VFact { color: green; }
+.FFact { color: red; }
